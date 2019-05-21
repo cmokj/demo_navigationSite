@@ -5,18 +5,44 @@
 a {
     text-decoration: none;
 }
+body {
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+}
 kbd {
-    border: 1px solid red;
-    width: 4em;
-    height: 4em;
-    display: inline-block;
+    border: 1px solid #373737;
+    border-radius: 6px;
+    width: 50px;
+    height: 40px;
+    background: -webkit-linear-gradient(top, #292929 0%,#207cca 0%,#292929 0%,#111111 100%);
+    box-shadow: 0 0 0 1px #1a1b1c,0 0 0 2px #1f2020,0 3px 0 2px #080808;
+    color: #c5c5c5;
+    font-family: Helvetica;
+    display: inline-flex;        
+    /* align-items: center;         
+    justify-content: center;      */
     text-transform: uppercase;
     position: relative;
+    margin: 0 10px;
+    font-size: 18px;
+    position: relative;
+}
+kbd > span {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+kbd > img {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
 }
 kbd > button {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 5px;
     display: none;
 }
 kbd:hover > button {
@@ -24,13 +50,20 @@ kbd:hover > button {
 }
 main {
     text-align: center;
+    display: flex;              /*弹性盒*/
+    justify-content: center;    /*弹性盒水平内部居中*/
+    align-items: center;        /*弹性盒垂直内部居中*/
+    height: 100vh;
 }
 #createDiv {
     display: inline-block;
 }
 #createDiv > div:nth-child(2) {
-    margin-left: 2em; 
+    margin-left: -30px; 
 }
 #createDiv > div:nth-child(3) {
-    margin-left: 2em;
+    margin-left: -100px;
+}
+.row {
+    margin: 20px auto;
 }
